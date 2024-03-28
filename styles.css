@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+:root {
+    --dark-blue: #5755FE;
+    --white: #FFF7FC;
+    --light-blue: #8B93FF;
+}
+
+body {
+    background: var(--dark-blue);
+    color: var(--white);
+    scroll-behavior: smooth;
+}
+
+input, select {
+    display: block;
+}
+
+.title {
+    text-align: center;
+    margin: 8vh auto;
+    font-size: xxx-large;
+    font-weight: bold;
+    border-top: 5px solid var(--white);
+    border-bottom: 5px solid var(--white);
+}
+
+#input {
+    width: 50%;
+    position: relative;
+    left: 25%;
+    text-align: center;
+    border: solid var(--white) 5px;
+    font-size: x-large;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    display: block;
+}
+
+#input > input, #input > select {
+    margin-bottom: 4vh;
+    margin-top: 1vh;
+    margin: 1vh auto 4vh auto;
+    height: 3vh;
+    border-radius: 0.3rem;
+    text-align: center;
+    width: 75%;
+    background: var(--light-blue);
+    outline-color: none;
+    color: var(--white);
+}
+
+#submitBtn {
+    width: 35%;
+    height: 4vh;
+    background: var(--light-blue);
+}
+
+#tasks {
+    text-align: center;
+    width: 80vw;
+    margin: auto auto 100px auto;
+    padding-top: 25px;
+    position: relative;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+}
+
+.task {
+    background: var(--light-blue);
+    padding: 2vh 2vw 2vh 2vw;
+    border-radius: 0.7rem;
+    font-size: 1.5rem;
+    min-width: fit-content;
+}
+
+.task > p {
+    padding-top: 1vh;
+}
+
+@media (max-width: 600px) {
+    #input > input, #input > select {
+        width: 95%;
+    }
+
+    #submitBtn {
+        width: 50%;
+    }
+
+    .task {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 1000px) {
+    #input > input, #input > select {
+        width: 50%;
+    }
+
+    .task {
+        font-size: 2rem;
+    }
+}

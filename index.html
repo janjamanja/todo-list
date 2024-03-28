@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <h1 class="title">To-do App</h1>
+        <div id="input">
+            <label for="name">Name *</label>
+            <input id="name" name="name">
+
+            <label for="deadline">Deadline *</label>
+            <input type="date" id="deadline" name="deadline">
+
+            <p>Choose category name</p>
+            <select id="category">
+                <option value="">---</option>
+                <option value="School">School</option>
+                <option value="Work">Work</option>
+                <option value="Personal">Personal</option>
+            </select>
+            
+            <button type="submit" id="submitBtn">Submit</button>
+        </div>
+        <h1 class="title">Tasks:</h1>
+        <div id="tasks">
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
