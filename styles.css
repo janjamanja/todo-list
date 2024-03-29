@@ -84,6 +84,28 @@ input, select {
     padding-top: 1vh;
 }
 
+.closeBtn {
+    float: right;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: x-large;
+}
+
+#clearAllBtn {
+    margin-top: -4vw;
+    width: 100%;
+    text-align: center;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    float: right;
+    color: white;
+    font-size: x-large;
+    border: none;
+    background: #FF71CD;
+}
+
+
 @media (max-width: 600px) {
     #input > input, #input > select {
         width: 95%;
