@@ -37,7 +37,7 @@ submitBtn.addEventListener('click', () => {     //main function for adding tasks
         tasks.innerHTML += `
         <div class="task">
             <button class="closeBtn">X</button>
-            <h1>${name}</h1>                            //this is the structure of a task, it comes with a button to delete it
+            <h1>${name}</h1>                            
             <p>Deadline: ${deadline}</p>        
             <p>${category}</p>
         </div>    
