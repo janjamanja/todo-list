@@ -4,12 +4,25 @@ const clearAllBtn = document.getElementById('clearAllBtn');
 
 const clearAllTasks = () => {
     tasks.innerHTML = '';
+    saveTasks();
 }
 
 const deleteTask = taskElement => {             //used as part of the process of deleting a single task (see more in event listener)
     taskElement.remove();
+    saveTasks();
 }
 
+const loadTasks = () => {
+    const savedTasks = localStorage.getItem('tasks');
+
+    if (savedTasks) {
+        tasks.innerHTML = savedTasks;
+    }
+}
+
+const saveTasks = () => {
+    localStorage.setItem('tasks', tasks.innerHTML);
+}
 
 submitBtn.addEventListener('click', () => {
     const name = document.getElementById('name').value;
@@ -30,6 +43,7 @@ submitBtn.addEventListener('click', () => {
         </div>    
         `
     }
+    saveTasks();
 })
 
 tasks.addEventListener('click', event => {                          //delete a singular task by pressing "X" button
@@ -40,3 +54,6 @@ tasks.addEventListener('click', event => {                          //delete a s
 });
 
 clearAllBtn.addEventListener('click', clearAllTasks);
+
+
+loadTasks();            //loads tasks when entering the web page
